@@ -14,9 +14,3 @@ This is a simple calculator application built using Flutter. It allows basic ari
 - Flutter SDK installed on your machine.
 - An Android or iOS device/emulator to run the app.
 
-## Installation
-
-1. Clone the repository or download the project files.
-
-   ```bash
-   git clone https://github.com/your-username/flutter-calculator.git
