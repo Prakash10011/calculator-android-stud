@@ -1,23 +1,50 @@
-# Flutter Calculator App
+Calculator App 
+Overview
+This is a simple calculator app built using Flutter. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division. The app stores the last calculated value using SharedPreferences, so the result persists even after closing the app.
 
-This is a simple calculator application built using Flutter. It allows basic arithmetic operations (addition, subtraction, multiplication, division) and stores the last calculated value using SharedPreferences.
+Features
+Basic arithmetic operations: *+, -, , /
+Persistent state using SharedPreferences
+8-character limit for display to prevent overflow
+Clean and user-friendly interface
+Error handling for invalid operations (like division by zero)
 
-## Features
+How It Works
+Number Input:
 
-- Basic calculator functionalities: addition, subtraction, multiplication, and division.
-- The app saves and loads the last value used in the calculator.
-- Supports numeric input, and displays results up to 2 decimal places.
-- Clear last entry (CE) and clear all (C) functionalities.
+User presses a number → The display updates.
+If it's a new entry or the display shows zero, the new number replaces it.
+If there’s existing content, the number is appended.
+Operation Input:
 
-## Prerequisites
+User selects an operator → First value and operation are stored.
+Display resets for the next input.
+Equals Calculation:
 
-- Flutter SDK installed on your machine.
-- An Android or iOS device/emulator to run the app.
+User presses "=" → Calculation is performed based on the selected operator.
+Result is displayed and stored using SharedPreferences.
+Invalid operations (like division by zero) show an "ERROR" message.
+Clear Operations:
 
-## Installation
+CE – Clears the current display.
+C – Clears both display and stored values.
 
-1. Clone the repository or download the project files.
+Project Structure
+Key Files:
 
-   ```bash
-   git clone https://github.com/your-username/flutter-calculator.git
+main.dart – Contains the entire logic and UI of the app.
+pubspec.yaml – Manages project dependencies and settings.
 
+State Management
+setState() is used to update the display and app state.
+SharedPreferences ensures that the last calculated value is retained between sessions.
+
+Changes Made
+Implemented state persistence with SharedPreferences.
+Added input validation and error handling.
+Streamlined UI for better user experience.
+
+Why These Changes?
+To create a smooth user experience with accurate calculations.
+To maintain state consistency even after closing the app.
+To provide simple and effective error handling.
